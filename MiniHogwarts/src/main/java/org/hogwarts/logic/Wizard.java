@@ -15,9 +15,11 @@ public class Wizard {
     public Wizard(){
         System.out.printf("Hola, soy %s",name);
     }
-    public Wizard(String name){
+    public Wizard(String name,String surname, byte age){
         this.name = name;
-        System.out.printf("Hola, soy %s\n",name);
+        this.surname= surname;
+        this.age= age;
+        System.out.printf("Hola, soy %s %s y tengo %s años\n",name,surname,age);
     }
 
     //Metodos
