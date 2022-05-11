@@ -35,7 +35,44 @@ public class Wizard {
             }
         }
     }
-    public void makePotion(){}
+    public void makePotion(){
+        case POCION_AMOR->{
+            if(this.level >1){
+            this.POCION_AMOR += 1;
+            System.out.printf(" POCION DE AMOR was built satisfactorily ");
+            }
+            else{
+                System.out.println("I do not have the necessary level to make this potion");
+            }
+            breack;
+            case POCION_ANIMAGOS ->{
+                if(this.level >2){
+                    this.POCION_ANIMAGOS += 1;
+                    System.out.println(" POCION ANIMAGOS was built satisfactorily");
+                }
+                else{
+                    System.out.println("I do not have the necessary level to make this potion"
+                    );
+                }
+                breack;
+            case POCION_DE_INGENIO {
+                if(this.level > 5)
+                {
+                this.POCION_DE_INGENIO += 1;
+                System.out.println("POCION DE INGENIO was built satisfactorily ");
+                }
+            else{
+                System.out.println("I do not have the necessary level to make this potion ")
+            }
+            breack;
+
+            }
+
+
+    }
+
+    
+    }
     public void fly(){}
     public void attackAnother(Wizard enemy){
         if(this.level > enemy.getLevel()){
