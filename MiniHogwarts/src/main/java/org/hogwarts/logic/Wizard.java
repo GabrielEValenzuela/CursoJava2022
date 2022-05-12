@@ -82,6 +82,41 @@ public class Wizard {
             System.out.printf("HP Despues: %.1f",enemy.getHp());
         }
     }
+    public void chooseHouse (House newHouse) {
+        switch (newHouse){
+            case Gryffindor -> {
+                System.out.println("Bienvenido a Gryffindor ");
+                System.out.println("Tus jefes de casa seran : Godric Gryffindor, Albus Dumbledore, Minerva McGonagall  ");
+                System.out.println("Ellos te guiaran dentro de Hogwarts ");
+                System.out.println("En esta casa desarrollaras cualidades como el valor, la fuerza y la audacia ");
+                System.out.println("Ah!! me olvidaba cuidado con Nick Casi Decapitado que anda merodeando por ahi ");
+                System.out.println("Buena Suerte");    
+            }
+            case Hufflepuff -> {
+                System.out.println("Bienvenido a Hufflepuff");
+                System.out.println("Tus jefes de casa seran : Helga Hufflepuff y Pomona Sprout  ");
+                System.out.println("Ellos te guiaran dentro de Hogwarts ");
+                System.out.println("En esta casa desarrollaras cualidades como la justicia, la lealtad y la paciencia ");
+                System.out.println("Ah!! me olvidaba cuidado con el Fraile Gordo que anda merodeando por ahi ");
+                System.out.println("Buena Suerte");    
+            }
+            case Ravenclaw ->{
+                System.out.println("Bienvenido a Ravenclaw ");
+                System.out.println("Tus jefes de casa seran : Rowena Ravenclaw y Filius Flitwick  ");
+                System.out.println("Ellos te guiaran dentro de Hogwarts ");
+                System.out.println("En esta casa desarrollaras cualidades como la creatividad, la erudicion y la inteligencia");
+                System.out.println("Ah!! me olvidaba cuidado con la Dama Gris que anda merodeando por ahi ");
+                System.out.println("Buena Suerte");   
+            }
+            case Slytherin -> {
+                System.out.println("Bienvenido a Slytherin ");
+                System.out.println("Tus jefes de casa seran : Salazar Slytherin, Horace Slughorn y Severus Snape ");
+                System.out.println("Ellos te guiaran dentro de Hogwarts ");
+                System.out.println("En esta casa desarrollaras cualidades como la ambision, la determinacion y la astucia");
+                System.out.println("Ah!! me olvidaba cuidado con el Barón Sanguinario que anda merodeando por ahi ");
+                System.out.println("Buena Suerte"); 
+            }
+
 
     public String getName() {
         return name;
