@@ -83,6 +83,7 @@ public class Wizard {
         }
     }
     public void chooseHouse (House newHouse) {
+        
         switch (newHouse){
             case Gryffindor -> {
                 System.out.println("Bienvenido a Gryffindor ");
