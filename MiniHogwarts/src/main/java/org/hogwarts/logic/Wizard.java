@@ -11,6 +11,19 @@ public class Wizard {
     private float energy;
     private byte level;
 
+    public AnimalFantastico getAnimalesfantasticos() {
+
+        return animalesfantasticos;
+    }
+
+    public void setAnimalesfantasticos(AnimalFantastico animalesfantasticos) {
+        this.animalesfantasticos = animalesfantasticos;
+    }
+
+    private AnimalFantastico animalesfantasticos;
+    public void AccionesAnimales(){
+        this.AnimalFantasticos.Fly();
+    }
     private Broomstrick broomstrick;
 
     public Broomstrick getBroomstrick() {
@@ -25,6 +38,8 @@ public class Wizard {
         this.broomstrick.Fly();
     }
 
+
+    }
     //CONSTRUCTORES
     public Wizard(){
         System.out.printf("Hola, soy %s",name);
@@ -127,7 +142,8 @@ public class Wizard {
             }
         }
     }
-
+A
+    public string AnimalesFantasticos()
     public String getName() {
         return name;
     }
@@ -191,5 +207,7 @@ public class Wizard {
     public void setLevel(byte level) {
         this.level = level;
     }
+
+
 
 }
