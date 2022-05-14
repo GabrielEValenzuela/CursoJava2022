@@ -11,6 +11,20 @@ public class Wizard {
     private float energy;
     private byte level;
 
+    private Broomstrick broomstrick;
+
+    public Broomstrick getBroomstrick() {
+        return broomstrick;
+    }
+
+    public void setBroomstrick(Broomstrick broomstrick) {
+        this.broomstrick = broomstrick;
+    }
+
+    public void FlyWizzard(){
+        this.broomstrick.Fly();
+    }
+
     //CONSTRUCTORES
     public Wizard(){
         System.out.printf("Hola, soy %s",name);
@@ -35,43 +49,33 @@ public class Wizard {
             }
         }
     }
-    public void makePotion(){
-        case POCION_AMOR->{
-            if(this.level >1){
-            this.POCION_AMOR += 1;
-            System.out.printf(" POCION DE AMOR was built satisfactorily ");
-            }
-            else{
-                System.out.println("I do not have the necessary level to make this potion");
-            }
-            breack;
-            case POCION_ANIMAGOS ->{
-                if(this.level >2){
-                    this.POCION_ANIMAGOS += 1;
-                    System.out.println(" POCION ANIMAGOS was built satisfactorily");
+    public void makePotion(Potion potion){
+        switch (potion){
+            case POCION_AMOR-> {
+                if (this.level > 1) {
+                    System.out.printf(" POCION DE AMOR was built satisfactorily ");
+                } else {
+                    System.out.println("I do not have the necessary level to make this potion");
                 }
-                else{
+            }
+            case POCION_ANIMAGOS -> {
+                if (this.level > 2) {
+                    System.out.println(" POCION ANIMAGOS was built satisfactorily");
+                } else {
                     System.out.println("I do not have the necessary level to make this potion"
                     );
                 }
-                breack;
-            case POCION_DE_INGENIO {
-                if(this.level > 5)
-                {
-                this.POCION_DE_INGENIO += 1;
-                System.out.println("POCION DE INGENIO was built satisfactorily ");
-                }
-            else{
-                System.out.println("I do not have the necessary level to make this potion ")
             }
-            breack;
-
+            case POCION_DE_INGENIO -> {
+                        if(this.level > 5)
+                        {
+                            System.out.println("POCION DE INGENIO was built satisfactorily ");
+                        }
+                        else{
+                            System.out.println("I do not have the necessary level to make this potion ");
+                        }
             }
-
-
-    }
-
-    
+        }
     }
     public void fly(){}
     public void attackAnother(Wizard enemy){
@@ -84,14 +88,15 @@ public class Wizard {
     }
     public void chooseHouse (House newHouse) {
         
-        switch (newHouse){
+        switch (newHouse) {
             case Gryffindor -> {
                 System.out.println("Bienvenido a Gryffindor ");
                 System.out.println("Tus jefes de casa seran : Godric Gryffindor, Albus Dumbledore, Minerva McGonagall  ");
                 System.out.println("Ellos te guiaran dentro de Hogwarts ");
                 System.out.println("En esta casa desarrollaras cualidades como el valor, la fuerza y la audacia ");
                 System.out.println("Ah!! me olvidaba cuidado con Nick Casi Decapitado que anda merodeando por ahi ");
-                System.out.println("Buena Suerte");    
+                System.out.println("Buena Suerte");
+                break;
             }
             case Hufflepuff -> {
                 System.out.println("Bienvenido a Hufflepuff");
@@ -99,15 +104,17 @@ public class Wizard {
                 System.out.println("Ellos te guiaran dentro de Hogwarts ");
                 System.out.println("En esta casa desarrollaras cualidades como la justicia, la lealtad y la paciencia ");
                 System.out.println("Ah!! me olvidaba cuidado con el Fraile Gordo que anda merodeando por ahi ");
-                System.out.println("Buena Suerte");    
+                System.out.println("Buena Suerte");
+                break;
             }
-            case Ravenclaw ->{
+            case Ravenclaw -> {
                 System.out.println("Bienvenido a Ravenclaw ");
                 System.out.println("Tus jefes de casa seran : Rowena Ravenclaw y Filius Flitwick  ");
                 System.out.println("Ellos te guiaran dentro de Hogwarts ");
                 System.out.println("En esta casa desarrollaras cualidades como la creatividad, la erudicion y la inteligencia");
                 System.out.println("Ah!! me olvidaba cuidado con la Dama Gris que anda merodeando por ahi ");
-                System.out.println("Buena Suerte");   
+                System.out.println("Buena Suerte");
+                break;
             }
             case Slytherin -> {
                 System.out.println("Bienvenido a Slytherin ");
@@ -115,9 +122,11 @@ public class Wizard {
                 System.out.println("Ellos te guiaran dentro de Hogwarts ");
                 System.out.println("En esta casa desarrollaras cualidades como la ambision, la determinacion y la astucia");
                 System.out.println("Ah!! me olvidaba cuidado con el Barón Sanguinario que anda merodeando por ahi ");
-                System.out.println("Buena Suerte"); 
+                System.out.println("Buena Suerte");
+                break;
             }
-
+        }
+    }
 
     public String getName() {
         return name;
