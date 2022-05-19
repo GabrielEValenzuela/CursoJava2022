@@ -1,14 +1,9 @@
 package org.hogwarts.logic;
 
-public class Fenix implements AnimalFantastico{
+public class Fenix implements AnimalFantastico {
     @Override
-
-
-
-    }
     public void comer(){
         System.out.println("Tengo hambre");
-                medio raro el fenix
     }
     public void cagar(){
         System.out.println("Falta papel");

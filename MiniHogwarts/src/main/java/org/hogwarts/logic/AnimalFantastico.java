@@ -1,6 +1,6 @@
 package org.hogwarts.logic;
 
-public interface AnimalFantasticos {
+public interface AnimalFantastico {
     void comer();
     void cagar();
     void atacar();

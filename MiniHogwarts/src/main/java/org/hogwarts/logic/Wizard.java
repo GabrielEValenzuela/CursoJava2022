@@ -1,6 +1,6 @@
 package org.hogwarts.logic;
 
-public class Wizard {
+public class Wizard implements Observer{
     //Miembros de la clase
     private String name;
     private String surname;
@@ -10,6 +10,12 @@ public class Wizard {
     private float hp;
     private float energy;
     private byte level;
+
+    public void setObs(Observable obs) {
+        this.obs = obs;
+    }
+
+    private Observable obs;
 
     public AnimalFantastico getAnimalesfantasticos() {
 
@@ -22,7 +28,7 @@ public class Wizard {
 
     private AnimalFantastico animalesfantasticos;
     public void AccionesAnimales(){
-        this.AnimalFantasticos.Fly();
+        this.animalesfantasticos.Fly();
     }
     private Broomstrick broomstrick;
 
@@ -36,9 +42,6 @@ public class Wizard {
 
     public void FlyWizzard(){
         this.broomstrick.Fly();
-    }
-
-
     }
     //CONSTRUCTORES
     public Wizard(){
@@ -142,8 +145,7 @@ public class Wizard {
             }
         }
     }
-A
-    public string AnimalesFantasticos()
+
     public String getName() {
         return name;
     }
@@ -209,5 +211,22 @@ A
     }
 
 
+    @Override
+    public void update(String data) {
+        System.out.println("Hey ! A new version is here: "+data+" :D");
+    }
 
+    @Override
+    public void suscribe() {
+        System.out.println("Suscribing "+this.name+" to "+ obs.getDetails() + "\n");
+        this.obs.suscribeObserver(this);
+        System.out.println("Suscribed, oh yeah baby");
+    }
+
+    @Override
+    public void unSuscribe() {
+        System.out.println("Unsuscribing "+this.name+" to "+ obs.getDetails() + "\n");
+        this.obs.unSuscribeObserver(this);
+        System.out.println("Unsuscribed, loooser!");
+    }
 }
