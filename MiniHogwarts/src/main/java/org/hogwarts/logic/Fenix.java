@@ -1,5 +1,6 @@
 package org.hogwarts.logic;
 
+//Modificado
 public class Fenix implements AnimalFantastico {
     @Override
     public void comer(){
